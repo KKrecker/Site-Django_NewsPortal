@@ -1,0 +1,35 @@
+{% extends "posts/base.html" %}
+{% block content %}
+<div class="container column" id="content">
+    <form action="{% url 'posts:create_offer'%}" method="post">
+        {% csrf_token %}
+        <div>
+            <label for="{{form.title.id_for_lable}}">
+
+            </label>
+            {{form.title}}
+        </div>
+        <div>
+            <label for="{{form.content.id_for_lable}}">
+
+            </label>
+            {{form.content}}
+        </div>
+        <div>
+            <label for="{{form.email.id_for_lable}}">
+
+            </label>
+            {{form.email}}
+        </div>
+
+        <div>
+            <label for="{{form.phone.id_for_lable}}">
+
+            </label>
+            {{form.phone}}
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+</div>
+{% endblock %}

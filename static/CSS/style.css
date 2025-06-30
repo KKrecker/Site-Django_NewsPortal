@@ -1,0 +1,39 @@
+.green{
+color:black;
+}
+
+.disable{
+    color:grey;
+    pointer-events: none;
+    cursor: default;
+}
+
+nav{
+    text-align: center;
+
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.row{
+    flex-direction: row;
+}
+.column {
+    flex-direction: column;
+    margin: 50px;
+}
+
+#main{
+    width: 80%;
+    justify-content: space-around;
+}
+
+#dap_nav{
+    width: 20%;
+}
+#content{
+    width: 80%;
+}
+

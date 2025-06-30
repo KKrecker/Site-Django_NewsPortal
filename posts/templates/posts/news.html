@@ -1,0 +1,38 @@
+{% extends "posts/base.html" %}
+{% block content %}
+
+<div class="container column" id="content">
+
+    {%for new in news%}
+        <div class="past">
+            <h2>{{ new.title }}</h2>
+            <p>{{ new.content }}</p>
+            <p>{{ new.date }}</p>
+        </div>
+    {%endfor%}
+    <div>
+        <a class="disable"></a>
+        <a class="{%if not news.has_previous%} disable {%endif%}" href="
+            {% if news.has_previous%}
+                {% url 'posts:page_news' news.previous_page_number  %}
+            {%else %}
+                #
+            {%endif%}">
+            <=
+        </a>
+
+        {% for page in news.paginator.page_range %}
+        <a href="{% url 'posts:page_news' page %}">{{page}}</a>
+        {%endfor%}
+        <a class="{%if not news.has_next%} disable {%endif%}" href="
+            {% if news.has_next%}
+                {% url 'posts:page_news' news.next_page_number  %}
+            {%else %}
+                #
+            {%endif%}">
+            =>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

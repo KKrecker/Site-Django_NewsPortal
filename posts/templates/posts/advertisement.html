@@ -1,0 +1,15 @@
+{% extends "posts/base.html" %}
+{% block content %}
+<div class="container column" id="content">
+
+    <div class="past">
+        <h2>{{ advertisement.title }}</h2>
+        <h3>Содержание</h3>
+        <p>{{ advertisement.content }}</p>
+        <p>{{ advertisement.date }}</p>
+
+    </div>
+</div>
+{% endblock %}
+
+

@@ -1,0 +1,16 @@
+{% extends "posts/base.html" %}
+{% block content %}
+<div class="container column" id="content">
+
+    {%for advertisement in advertisements%}
+        <div class="past">
+            <h2><a href="{% url 'posts:advertisement' advertisement.id %}">{{ advertisement.title }}</a></h2>
+            <p>{{ advertisement.description }}</p>
+            <p>{{ advertisement.date }}</p>
+
+        </div>
+    {%endfor%}
+</div>
+{% endblock %}
+
+

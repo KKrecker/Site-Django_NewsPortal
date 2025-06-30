@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href='{% static "CSS/style.css" %}' rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="{% url 'index'%}">
+            Главная
+        </a>
+        <a href="{% url 'posts:news'%}">
+            Новости
+        </a>
+        <a href="{% url 'posts:advertisements'%}">
+            Объявления
+        </a>
+        <a href="{%url 'contacts'%}">
+            Контакты
+        </a>
+        <a href="{%url 'posts:create_advertisements'%}">
+            Создать объявление
+        </a>
+        <a href="{%url 'posts:create_offer'%}">
+            Ваши предложения
+        </a>
+
+
+    </nav>
+    <!-- Page Content -->
+    <div class="container row">
+        <div class="container row" id="main">
+            <!-- Дополнительная навигация -->
+            <div class="container column" id="dop_nav">
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+                <div>4</div>
+            </div>
+            <!-- Content -->
+            {% block content %}
+            {% endblock %}
+
+        </div>
+    </div>
+
+    <footer></footer>
+
+</body>
+</html>

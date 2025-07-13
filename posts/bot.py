@@ -1,5 +1,8 @@
 import telebot
-token="7517946921:AAHFuJKDuDOQL3YIsOBZ2WufSrIbtxnt3C0"
+from dotenv import load_dotenv
+import os
+load_dotenv()
+token=os.getenv('TG_TOKEN')
 bot=telebot.TeleBot(token)
 @bot.message_handler(commands=['start'])
 def start_message(message):

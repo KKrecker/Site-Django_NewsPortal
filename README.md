@@ -1,4 +1,6 @@
 Сайт на Django, новостной портал
+
+Команда для скачивания зависимостей
 ```bash
 pip install -r requirements.txt
 ```

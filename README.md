@@ -3,6 +3,7 @@
 pip install -r requirements.txt
 ```
 Скриншоты сайта ниже 
+
 Главная страница
 ![image](images-site-for-github-README-not-use-on-site/index.png)
 Посты

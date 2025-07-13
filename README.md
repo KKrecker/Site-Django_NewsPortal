@@ -1,3 +1,5 @@
-Сайт на Django
-База данных - SQLite3
-Фунционал - ...
+Сайт на Django, новостной портал
+```bash
+pip install -r requirements.txt
+```
+Скриншоты сайта ниже 
